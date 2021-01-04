@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div id="ui">
-        <button onclick="createSquares();">Generate Grid</button>
-    </div> 
-    <div id="mainContainer">
-        
+
+        <label for="dimensions">Grid Dimensions</label>
+        <input type="range" id="dimensions" name="dimensions" min="1" max="100">
+
+        <button id="blackButton">Black</button>
+        <button id="grayscaleButton">Grayscale</button>
+        <button id="randomButton">Random Colours</button>
+
+        <button id="createButton" onclick="createSquares()">Create Grid</button>
     </div>
-    
+    <div id="mainContainer">
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>

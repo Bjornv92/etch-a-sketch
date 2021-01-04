@@ -1,47 +1,16 @@
 #mainContainer {
-    width: 960px;
-    margin: 0 auto;
-    height: auto;
-    text-align: center;
+    max-width: 960px;
+    margin: 50px auto;
+}
+
+.col {
     display: flex;
 }
 
 .square {
     border: 1px solid black;
-    width: 60px;
-    height: 60px;
-}
-
-#ui {
-    text-align: center;
 }
 
 button {
     margin-bottom: 25px;
 }
-
-.hoverBlack {
-    
-}
-/* #mainContainer {
-    width: 960px;
-    margin: 0 auto;
-    height: auto;
-    text-align: center;
-}
-
-.square {
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-}
-
-.row {
-    text-align: center;
-    margin-bottom: -6px;
-}
-
-#mainContainer button {
-    margin-bottom: 25px;
-} */
