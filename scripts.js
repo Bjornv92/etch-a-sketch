@@ -1,8 +1,13 @@
 const mainContainer = document.getElementById("gridContainer");
+const range = document.getElementById("dimensions");
+
+//Grid Reset
 
 function resetGrid() {
     mainContainer.querySelectorAll("*").forEach(n => n.remove());
 }
+
+//Grid Creation
 
 function createSquares() {
 
@@ -29,27 +34,21 @@ function createSquares() {
     blackColour();
 };
 
+//GridColours
+
 function blackColour() {
     document.querySelectorAll(".square").forEach(square => {
         square.addEventListener("mouseover", function() {
-        square.style.backgroundColor = "black";
+            square.style.backgroundColor = "black";
         });
     });
 };
-
-function grayColour() {
-    document.querySelectorAll(".square").foreach(square => {
-        square.addEventListener("mouseover", function() {
-            square.style.backgroundColor = "green";
-        })
-    })
-}
 
 function randomColour() {
     document.querySelectorAll(".square").forEach(square => {
         square.addEventListener("mouseover", function() {
         let randomColour = Math.floor(Math.random()*16777215).toString(16);
-        square.style.backgroundColor = "#" + randomColour;
+            square.style.backgroundColor = "#" + randomColour;
         });
     });
 };
@@ -57,7 +56,12 @@ function randomColour() {
 function erase() {
     document.querySelectorAll(".square").forEach(square => {
         square.addEventListener("mouseover", function() {
-        square.style.backgroundColor = "white";
+            square.style.backgroundColor = "white";
         });
     });
 };
+
+//Range Visual Output
+dimensions.addEventListener("input" , () => {
+    bubble.textContent = range.value + "x" + range.value;
+});
