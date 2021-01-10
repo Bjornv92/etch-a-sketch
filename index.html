@@ -8,16 +8,19 @@
 </head>
 <body onload="createSquares(); blackColour();">
         <div id="ui">
-
-            <label for="dimensions">Grid Dimensions</label>
-            <input type="range" id="dimensions" name="slider" min="1" max="100" value="25">
-            <div class="bubble bubble-bottom-left" id="bubble">25x25</div>
-
-            <button id="blackButton" class="colourButton" value="black" onclick="blackColour()">Black</button>
-            <button id="randomButton" value="random" class="colourButton" onclick="randomColour()">Random</button>
-            <button id="eraserButton" value="eraser" class="colourButton" onclick="erase()">Eraser</button>
-
-            <button id="createButton" onclick="createSquares()">Create Grid</button>
+            <div id="gridUI">
+                <h2 class="title">Grid Dimensions</h2>
+                <input type="range" id="dimensions" name="slider" min="1" max="100" value="25">
+                <div class="bubble bubble-bottom-left" id="bubble">25x25</div>
+                <button id="createButton" onclick="createSquares()">Create Grid</button>
+            </div>
+            
+            <div id="coloursUI">
+                <h2 class="title">Colours</h2>
+                <button id="blackButton" class="colourButton" value="black" onclick="blackColour()">Black</button>
+                <button id="randomButton" value="random" class="colourButton" onclick="randomColour()">Random</button>
+                <button id="eraserButton" value="eraser" class="colourButton" onclick="erase()">Eraser</button>
+            </div>
         </div>
 
         <div id="flexContainer">
