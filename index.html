@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="createSquares(); blackColour();">
+
+        <h1>Etch-A-Sketch</h1>
         <div id="ui">
-            <div id="gridUI">
+            <div id="gridUI" class="card">
                 <h2 class="title">Grid Dimensions</h2>
-                <input type="range" id="dimensions" name="slider" min="1" max="100" value="25">
-                <div class="bubble bubble-bottom-left" id="bubble">25x25</div>
+                <input type="range" id="dimensions" name="slider" min="1" max="100" value="10">
+                <div class="bubble" id="bubble">10x10</div>
                 <button id="createButton" onclick="createSquares()">Create Grid</button>
             </div>
             
-            <div id="coloursUI">
+            <div id="coloursUI" class="card">
                 <h2 class="title">Colours</h2>
                 <button id="blackButton" class="colourButton" value="black" onclick="blackColour()">Black</button>
                 <button id="randomButton" value="random" class="colourButton" onclick="randomColour()">Random</button>
@@ -27,6 +29,10 @@
             <div id="gridContainer">
             </div>
         </div>
+
+        <footer>
+            <p>Made by Bjorn Vanhees - The Odin Project</p>
+        </footer>
 
     <script src="scripts.js"></script>
 </body>

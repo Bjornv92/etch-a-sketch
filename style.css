@@ -1,12 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&family=VT323&display=swap');
+
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: .2em;
+    color: #222;
+    text-transform: uppercase;
 }
 
 body {
-    background: #59C173;  /* fallback for old browsers */
+background: #59C173;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+
+h1 {
+    font-family: "VT323", monospace;
+    text-align: center;
+    font-size: 3.5em;
+    text-shadow: 2px 2px #fff;
+    margin-bottom: 75px;
 }
 
 #flexContainer {
@@ -27,47 +42,200 @@ background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+
     display: inline-block;
     font-family: sans-serif;
     font-size: 12px;
-    width: 50px;
-    background: rgb(179, 0, 0);
+    width: 100px;
+    border: 1px solid #222;
+    box-shadow: inset 0 0 5px #222;
     border-radius: 40px;
     padding: 5px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #222;
     left: 500px;
-}
-
-#gridUI {
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    padding: 30px 0;
-    border: 3px solid rgb(148, 148, 148);
-    border-radius: 5px;
-    box-shadow: 60px -16px black;
-}
-
-#coloursUI {
-    background-color: green;
-    width: 30%;
-    text-align: center;
-    padding: 30px 0;
+    margin-bottom: 15px;
 }
 
 #ui {
-    margin: 25px 0px 50px 0px;
+    margin: 0px 0px 50px 0px;
     display: flex;
     justify-content: space-around;
 }
 
+#gridUI {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%; 
+}
+
+#coloursUI {
+    text-align: center;
+    margin-right: 10%;
+}
+
+#coloursUI .title {
+    margin-bottom: 25px;
+}
+
+.card {
+    background-color: transparent;
+    width: 25%;
+    padding: 30px 0;
+    border: 1px solid #222;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #222;
+}
+
 .title {
-    font-size: 1.75em;
+    font-size: 1.5em;
     margin: 0 0 10px 0;
     text-decoration: underline;
 }
 
 button {
+    font-size: 1em;
     background-color: transparent;
-    border: 1px solid pink;
+    border: 1px solid #222;
+    padding: 5px 10px;
+    transition: all 0.25s;
 }
+
+button:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+    box-shadow: 0 0.5em 0.5em -0.5em;
+    transform: translate(0.25em, -0.25em);
+}
+
+button:focus {
+    outline: none;
+}
+
+.colourButton:focus {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+/* Range Input Basic Appearance Override */
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 75%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    width: 75%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+  /* Slider Styling - CSS Tricks*/
+
+  /* CHROME */
+
+  input[type=range] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 75%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 75%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #ffffff;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 12px;
+    border-radius: 3px;
+    background: #ff0000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ffffff;
+  }
+
+  /* FIREFOX */
+
+  input[type=range]::-moz-range-track {
+    width: 75%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: ##ffffff;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 12px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  /* IE */
+
+  input[type=range]::-ms-track {
+    width: 75%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: ##ffffff;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: ##ffffff;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 12px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: ##ffffff;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: ##ffffff;
+  }
